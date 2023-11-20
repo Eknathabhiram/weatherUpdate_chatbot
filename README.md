@@ -18,5 +18,11 @@ Additional to that Bot will be able to respond for proper greeting or chitchat.
 6. data.yml is not needed as I don't need any special entity recognition.
 7. creating actions.yml -> to perform custom actions in our case to get weather details from external APIs.
 
+## Things to implement
+1. Structured happy flow(done)
+2. Sad flow(done)
+3. When city is not recognised by rasa it should prompt the city and take it.(done)
+4. connecting actual api to get relevant details.(needs to be implemented)
+
 
 
