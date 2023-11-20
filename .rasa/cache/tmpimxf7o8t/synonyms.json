@@ -1,0 +1,18 @@
+{
+  "climate": "weather",
+  "weather": "weather",
+  "forecast": "weather",
+  "climate conditions": "weather",
+  "weather forecast": "weather",
+  "conditions": "weather",
+  "atmospheric conditions": "weather",
+  "new york": "New York",
+  "london": "London",
+  "paris": "Paris",
+  "los angeles": "Los Angeles",
+  "sydney": "Sydney",
+  "tokyo": "Tokyo",
+  "berlin": "Berlin",
+  "san francisco": "San Francisco",
+  "mumbai": "Mumbai"
+}

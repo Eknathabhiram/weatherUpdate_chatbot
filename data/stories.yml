@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_weather
+    entities:
+      - location 
+  - action: Action_weather_condition
+  
+- story: interactive story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inquire_weather
+  - action: location_form
+  - active_loop: location_form
+  - slot_was_set:
+    - requested_slot: location
+  - action: utter_submit
+  - action: Action_weather_condition
+
+

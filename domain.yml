@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  - bot_challenge
+  - inquire_weather
+
+entities:
+  - location
+
+
+
+actions:
+  - Action_weather_condition
+  - action_extract_city_name
+
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you? I am weather bot.
+          I can give you weather condition in different cities"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a weather bot , powered by Abhiram. Can give you weather condition in different cities"
+
+  utter_ask_location:
+  - text: "I am stupid bot right now. I didn't get your city. Can you spell it out for me?"
+
+  utter_submit:
+  - text: Ok. Thanks!
+
+  utter_slots_values:
+  - text: I will remember that your city is {location}!
+
+
+
+forms:
+  location_form:
+    required_slots:
+      - location
+
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+      - type: from_text
+        conditions:
+         - active_loop: location_form
+           requested_slot: location
+
+      
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

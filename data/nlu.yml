@@ -1,0 +1,114 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: inquire_weather
+  examples: |
+    - How is the weather today in [New York]{"entity":"location","value":"New York"}
+    - Tell me the weather forecast for [London]{"entity":"location","value":"London"}.
+    - How is the weather today in [Hyderabad]{"entity":"location","value":"Hyderabad"}
+    - Tell me the weather forecast for [Banglore]{"entity":"location","value":"Banglore"}.
+    - What's the weather like in [Paris]{"entity":"location","value":"Paris"} today?
+    - Can you give me the weather report for [Los Angeles]{"entity":"location","value":"Los Angeles"}?
+    - What's the forecast for [Sydney]{"entity":"location","value":"Sydney"}?
+    - How's the weather in [Tokyo]{"entity":"location","value":"Tokyo"} this afternoon?
+    - I'm curious about the weather in [Berlin]{"entity":"location","value":"Berlin"}. Any insights?
+    - What can you tell me about the weather in [San Francisco]{"entity":"location","value":"San Francisco"}?
+    - Give me the current weather conditions in [Mumbai]{"entity":"location","value":"Mumbai"}.
+
+- synonym: weather
+  examples: |
+    - climate
+    - Forecast
+    - climate conditions
+    - weather forecast
+    - Conditions
+    - Atmospheric Conditions
